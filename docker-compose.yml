@@ -15,6 +15,7 @@ services:
       - 8000:8080
     networks:
       - rssparser-backend
+      - rssparser-frontend
 
   frontend:
     build: .
@@ -23,7 +24,8 @@ services:
     ports:
       - 80:5000
     networks:
-      - rssparser-backend
+      - rssparser-frontend
 
 networks:
+  rssparser-frontend:
   rssparser-backend:
