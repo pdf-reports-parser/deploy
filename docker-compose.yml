@@ -8,7 +8,7 @@ services:
       - rssparser-backend
 
   app:
-    image: ghcr.io/pdf-reports-parser/backend:main
+    image: ghcr.io/pdf-reports-parser/backend:v0.1.0
     env_file:
       - .env
     ports:
@@ -18,7 +18,7 @@ services:
       - rssparser-frontend
 
   frontend:
-    image: ghcr.io/pdf-reports-parser/frontend:main
+    image: ghcr.io/pdf-reports-parser/frontend:v0.1.1
     env_file:
       - .env
     ports:
