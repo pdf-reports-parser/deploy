@@ -8,17 +8,17 @@ services:
       - rssparser-backend
 
   app:
-    build: .
+    image: ghcr.io/pdf-reports-parser/backend:v0.1.1
     env_file:
       - .env
     ports:
-      - 8000:8080
+      - 8000:5000
     networks:
       - rssparser-backend
       - rssparser-frontend
 
   frontend:
-    build: .
+    image: ghcr.io/pdf-reports-parser/frontend:v0.1.1
     env_file:
       - .env
     ports:
