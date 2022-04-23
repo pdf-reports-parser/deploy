@@ -6,6 +6,8 @@ services:
       - .env
     networks:
       - rssparser-backend
+    volumes:
+      - ...
 
   app:
     image: ghcr.io/pdf-reports-parser/backend:v0.1.1
