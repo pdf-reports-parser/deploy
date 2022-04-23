@@ -132,4 +132,4 @@ dmypy.json
 .idea
 
 # alembic
-config/alembic.ini
+/config/
