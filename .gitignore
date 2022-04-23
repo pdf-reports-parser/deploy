@@ -130,3 +130,6 @@ dmypy.json
 
 # pycharm
 .idea
+
+# alembic
+config/alembic.ini
