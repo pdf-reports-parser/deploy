@@ -6,9 +6,11 @@ services:
       - .env
     networks:
       - rssparser-backend
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql/data
 
   app:
-    image: ghcr.io/pdf-reports-parser/backend:v0.1.1
+    image: ghcr.io/pdf-reports-parser/backend:v0.1.2
     env_file:
       - .env
     ports:
@@ -16,9 +18,11 @@ services:
     networks:
       - rssparser-backend
       - rssparser-frontend
+    volumes:
+      - ./config:/app/config:ro
 
   frontend:
-    image: ghcr.io/pdf-reports-parser/frontend:v0.1.1
+    image: ghcr.io/pdf-reports-parser/frontend:v0.1.2
     env_file:
       - .env
     ports:
