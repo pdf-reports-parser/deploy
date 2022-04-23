@@ -22,7 +22,7 @@ services:
       - ./config:/app/config:ro
 
   frontend:
-    image: ghcr.io/pdf-reports-parser/frontend:v0.1.1
+    image: ghcr.io/pdf-reports-parser/frontend:v0.1.2
     env_file:
       - .env
     ports:
